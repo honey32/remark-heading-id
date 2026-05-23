@@ -1,4 +1,4 @@
-const _ = require('lodash')
+const { kebabCase } = require('es-toolkit/string')
 
 const isNonEmptyString = value => {
   if (value == null) {
@@ -29,7 +29,7 @@ const getDefaultId = children => {
 }
 
 const formatDefaultId = value => {
-  return _.kebabCase(value.replace(/\\s+/g, ' ').trim())
+  return kebabCase(value.replace(/\\s+/g, ' ').trim())
 }
 
 const setNodeId = (node, id) => {

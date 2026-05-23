@@ -54,7 +54,7 @@
     "remark-rehype": "^4.0.0"
   },
   "dependencies": {
-    "unist-util-visit": "^1.4.0",
-    "lodash": "^4.17.21"
+    "es-toolkit": "^1.46.1",
+    "unist-util-visit": "^1.4.0"
   }
 }
