@@ -1,9 +1,19 @@
 const _ = require('lodash')
 
+const isNonEmptyString = value => {
+  if (value == null) {
+    return false
+  }
+  if (typeof value === 'string') {
+    return value.length > 0
+  }
+  return false
+}
+
 const extractText = children => {
   return children
     .map(child => {
-      if (!_.isEmpty(child.value)) {
+      if (isNonEmptyString(child.value)) {
         return child.value
       } else if (child.children && child.children.length > 0) {
         return extractText(child.children)
